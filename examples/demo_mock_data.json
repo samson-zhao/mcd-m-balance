@@ -1,0 +1,170 @@
+{
+  "_readme": "本文件为 M-Balance 离线演示用模拟数据（MOCK）。所有餐品、价格、券均为示意值，不代表麦当劳真实在售信息；不含任何真实用户信息、订单号、手机号或地址。在线模式下，本文件不会被使用，所有数据均来自麦当劳 MCP 实时返回。",
+  "_tools": [
+    { "name": "now-time-info", "description": "获取当前时间信息" },
+    { "name": "list-nutrition-foods", "description": "餐品营养信息列表" },
+    { "name": "query-meals", "description": "查询当前可售卖的餐品列表" },
+    { "name": "query-store-coupons", "description": "查询用户当前门店下可用的优惠券列表" },
+    { "name": "available-coupons", "description": "麦麦省券列表查询" },
+    { "name": "auto-bind-coupons", "description": "麦麦省一键领券" },
+    { "name": "query-my-coupons", "description": "我的优惠券查询" },
+    { "name": "calculate-price", "description": "商品价格计算" },
+    { "name": "campaign-calendar", "description": "活动日历查询工具" }
+  ],
+  "tools": {
+    "now-time-info": {
+      "date": "2026-10-09",
+      "time": "12:20:00",
+      "weekday": "Friday",
+      "timezone": "Asia/Shanghai"
+    },
+    "list-nutrition-foods": [
+      { "name": "巨无霸", "energyKcal": 510, "protein": 26, "fat": 26, "carbohydrate": 43, "sodium": 920 },
+      { "name": "双层吉士汉堡", "energyKcal": 450, "protein": 25, "fat": 23, "carbohydrate": 35, "sodium": 1050 },
+      { "name": "麦辣鸡腿汉堡", "energyKcal": 480, "protein": 24, "fat": 21, "carbohydrate": 48, "sodium": 1030 },
+      { "name": "板烧鸡腿堡", "energyKcal": 400, "protein": 26, "fat": 15, "carbohydrate": 40, "sodium": 890 },
+      { "name": "麦香鱼", "energyKcal": 340, "protein": 15, "fat": 15, "carbohydrate": 37, "sodium": 660 },
+      { "name": "麦乐鸡（5块）", "energyKcal": 230, "protein": 14, "fat": 13, "carbohydrate": 13, "sodium": 480 },
+      { "name": "大薯条", "energyKcal": 340, "protein": 4, "fat": 16, "carbohydrate": 44, "sodium": 270 },
+      { "name": "中薯条", "energyKcal": 230, "protein": 3, "fat": 11, "carbohydrate": 30, "sodium": 190 },
+      { "name": "玉米杯", "energyKcal": 90, "protein": 3, "fat": 1, "carbohydrate": 20, "sodium": 5 },
+      { "name": "蔬菜沙拉", "energyKcal": 40, "protein": 2, "fat": 1, "carbohydrate": 7, "sodium": 15 },
+      { "name": "可口可乐（中）", "energyKcal": 150, "protein": 0, "fat": 0, "carbohydrate": 38, "sodium": 15 },
+      { "name": "零度可乐（中）", "energyKcal": 0, "protein": 0, "fat": 0, "carbohydrate": 0, "sodium": 20 },
+      { "name": "美式咖啡（中）", "energyKcal": 10, "protein": 1, "fat": 0, "carbohydrate": 1, "sodium": 10 },
+      { "name": "无糖纯茶（中）", "energyKcal": 0, "protein": 0, "fat": 0, "carbohydrate": 0, "sodium": 5 },
+      { "name": "橙汁（中）", "energyKcal": 120, "protein": 2, "fat": 0, "carbohydrate": 28, "sodium": 5 },
+      { "name": "麦旋风（奥利奥）", "energyKcal": 300, "protein": 6, "fat": 12, "carbohydrate": 42, "sodium": 140 },
+      { "name": "苹果片", "energyKcal": 35, "protein": 0, "fat": 0, "carbohydrate": 9, "sodium": 0 },
+      { "name": "双层鳕鱼堡", "energyKcal": 520, "protein": 22, "fat": 25, "carbohydrate": 51, "sodium": 1150 }
+    ],
+    "query-meals": {
+      "data": [
+        {
+          "categoryName": "汉堡",
+          "products": [
+            { "code": "P10001", "name": "巨无霸", "price": 21.5 },
+            { "code": "P10002", "name": "双层吉士汉堡", "price": 19.5 },
+            { "code": "P10003", "name": "麦辣鸡腿汉堡", "price": 19.0 },
+            { "code": "P10004", "name": "板烧鸡腿堡", "price": 20.5 },
+            { "code": "P10005", "name": "麦香鱼", "price": 16.5 },
+            { "code": "P10006", "name": "双层鳕鱼堡", "price": 22.5 }
+          ]
+        },
+        {
+          "categoryName": "小食",
+          "products": [
+            { "code": "P20001", "name": "麦乐鸡（5块）", "price": 13.0 },
+            { "code": "P20002", "name": "大薯条", "price": 12.5 },
+            { "code": "P20003", "name": "中薯条", "price": 10.0 },
+            { "code": "P20004", "name": "玉米杯", "price": 8.5 },
+            { "code": "P20005", "name": "蔬菜沙拉", "price": 9.5 },
+            { "code": "P20006", "name": "苹果片", "price": 7.0 }
+          ]
+        },
+        {
+          "categoryName": "饮品",
+          "products": [
+            { "code": "P30001", "name": "可口可乐（中）", "price": 9.5 },
+            { "code": "P30002", "name": "零度可乐（中）", "price": 9.5 },
+            { "code": "P30003", "name": "美式咖啡（中）", "price": 15.0 },
+            { "code": "P30004", "name": "无糖纯茶（中）", "price": 12.0 },
+            { "code": "P30005", "name": "橙汁（中）", "price": 13.5 }
+          ]
+        },
+        {
+          "categoryName": "甜品",
+          "products": [
+            { "code": "P40001", "name": "麦旋风（奥利奥）", "price": 12.5 }
+          ]
+        }
+      ]
+    },
+    "query-my-coupons": {
+      "data": [
+        {
+          "couponId": "CPN-MY-001",
+          "name": "巨无霸单件立减 5 元",
+          "type": "discount",
+          "threshold": 15,
+          "amount": 5,
+          "applicableCodes": ["P10001"],
+          "source": "my",
+          "expireTime": "2026-10-31"
+        },
+        {
+          "couponId": "CPN-MY-002",
+          "name": "全场满 35 减 8 元",
+          "type": "discount",
+          "threshold": 35,
+          "amount": 8,
+          "source": "my",
+          "expireTime": "2026-10-31"
+        }
+      ]
+    },
+    "available-coupons": {
+      "data": [
+        {
+          "couponId": "CPN-MMS-001",
+          "name": "麦麦省 · 麦乐鸡5块免费兑换券",
+          "type": "exchange",
+          "applicableCodes": ["P20001"],
+          "source": "maimai",
+          "expireTime": "2026-10-20"
+        },
+        {
+          "couponId": "CPN-MMS-002",
+          "name": "麦麦省 · 中薯条买一送一",
+          "type": "percent",
+          "percent": 0.5,
+          "applicableCodes": ["P20003"],
+          "source": "maimai",
+          "expireTime": "2026-10-20"
+        }
+      ]
+    },
+    "auto-bind-coupons": {
+      "success": true,
+      "boundCount": 0,
+      "message": "MOCK：演示环境下不执行真实领券，避免产生账号侧状态变更"
+    },
+    "query-store-coupons": {
+      "data": [
+        {
+          "couponId": "CPN-STORE-001",
+          "name": "门店专享 · 板烧鸡腿堡立减 6 元",
+          "type": "discount",
+          "threshold": 0,
+          "amount": 6,
+          "applicableCodes": ["P10004"],
+          "source": "store",
+          "expireTime": "2026-10-15"
+        }
+      ]
+    },
+    "query-meal-detail": {
+      "code": "P10001",
+      "name": "巨无霸",
+      "composable": true,
+      "replaceableOptions": [
+        { "group": "饮品", "options": ["可口可乐（中）", "零度可乐（中）", "无糖纯茶（中）"] },
+        { "group": "小食", "options": ["中薯条", "玉米杯", "蔬菜沙拉"] }
+      ],
+      "_note": "MOCK：真实套餐组成与替换项以 MCP 服务端返回为准"
+    },
+    "calculate-price": {
+      "payableAmount": 24.0,
+      "discountAmount": 6.0,
+      "deliveryFee": 0,
+      "totalAmount": 30.0,
+      "_note": "MOCK：真实核价由 MCP 服务端按门店实时价格与券规则计算"
+    },
+    "campaign-calendar": {
+      "data": [
+        { "date": "2026-10-09", "title": "麦麦省会员日", "status": "进行中" },
+        { "date": "2026-10-12", "title": "早餐时段加 1 元得咖啡", "status": "即将开始" }
+      ]
+    }
+  }
+}

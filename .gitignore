@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.env
+.DS_Store
+
+# 绝不提交本地 Token
+.mcp-config.local.json
